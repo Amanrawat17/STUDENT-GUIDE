@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENT GUIDE</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+
+        nav {
+            flex: 1;
+            text-align: right;
+        }
+
+        nav ul {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #FFFFFF;
+        }
+
+        p {
+            color: #FFFFFF;
+        }
+
+        .container {
+            max-width: 1300px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .row {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .col-2 {
+            flex-basis: 50%;
+            min-width: 300px;
+        }
+
+        .col-2 img {
+            max-width: 100%;
+            padding: 50px 0;
+        }
+
+        .col-2 h1 {
+            font-size: 50px;
+            line-height: 60px;
+            margin: 25px 0;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #1270eb;
+            color: #a0eb16;
+            padding: 8px 30px;
+            margin: 30px 0;
+            border-radius: 30px;
+            transition: background 0.5s;
+        }
+
+        .btn:hover {
+            background: #56565674;
+        }
+
+        .header {
+           background-image: url("gradient-black-background-with-cubes_52683-76469.webp");
+            background-size: cover;
+            /* This ensures the image covers the entire header */
+            background-position: center;
+            /* This centers the image horizontally and vertically */
+            height: 500px;
+            /* Set the desired height for the header */
+            width: 1400px;
+        }
+
+
+        .header-row {
+            margin-top: 70px;
+        }
+
+        .categories {
+            margin: 70px 0;
+        }
+
+        .col-3 {
+            flex-basis: 30%;
+            min-width: 250px;
+            margin-bottom: 30px;
+        }
+
+        .col-3 img {
+            width: 100%;
+        }
+
+        .small-container {
+            max-width: 1080px;
+            margin: auto;
+            padding-left: 25px;
+            padding-right: 25px;
+
+        }
+
+        .col-4 {
+            flex-basis: 25%;
+            padding: 10px;
+            min-width: 20px;
+            margin-bottom: 50px;
+            transition: transform 0.5s;
+        }
+
+        .col-4 img {
+            width: 100%;
+        }
+
+        .title {
+            text-align: center;
+            margin: 0 auto 80px;
+            position: relative;
+            line-height: 60px;
+            color: #555;
+        }
+
+        .title::after {
+            content: "";
+            background: #ff523b;
+            width: 80px;
+            height: 5px;
+            border-radius: 5px;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        h4 {
+            color: #555;
+            font-weight: normal;
+        }
+
+        .col-4 {
+            font-size: 14px;
+        }
+
+        .rating.fa {
+            color: #1ec316d4;
+        }
+
+        .col-4:hover {
+            transform: translate(-50px);
+        }
+
+        /*----offer------*/
+        .offer {
+            background: radial-gradient(#fff, #ffd6d6);
+            margin-top: 80px;
+            padding: 30px 0;
+        }
+
+        .col-2 .offer-img {
+            padding: 50px;
+        }
+
+        small {
+            color: #555;
+        }
+
+        .testimonial {
+            padding-top: 100px;
+        }
+
+        .testimonial .col-3 {
+            text-align: center;
+            padding: 40px 20px;
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: transform 0.5s;
+        }
+
+        .testimonial .col-3 img {
+            width: 50px;
+            margin-top: 20px;
+            border-radius: 50%;
+        }
+
+        .testimonial .col-3:hover {
+            transform: translate(-10px);
+        }
+
+        .fa.fa-quote-left {
+            font-size: 34px;
+            color: #ff523b
+        }
+
+        .col-3 p {
+            font-size: 12px;
+            margin: 12px 0;
+            color: #777;
+        }
+
+        .testimonial .col-3 h3 {
+            font-weight: 600;
+            color: #555;
+            font-size: 16px;
+        }
+
+        .brands {
+            margin: 100px auto;
+        }
+
+        .col-5 {
+            width: 160px;
+        }
+
+        .col-5 img {
+            width: 100%;
+            cursor: pointer;
+            filter: grayscale(100%);
+        }
+
+        .col-5 img:hover {
+            filter: grayscale()
+        }
+
+        .footer {
+            background: #000;
+            color: #8a8a8a;
+            font-size: 14px;
+            padding: 60px 0 20px;
+        }
+
+        .footer p {
+            color: #8a8a8a;
+        }
+
+        .footer h3 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-1,
+        .footer-col-2,
+        .footer-col-3,
+        .footer-col-4 {
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-1 {
+            flex-basis: 30%;
+        }
+
+        .footer-col-2 {
+            flex: 1;
+            text-align: center;
+        }
+
+        .footer-col-2 img {
+            width: 180px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col-3,
+        .footer-col-4 {
+            flex-basis: 12%;
+            text-align: 12%;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        .app-logo {
+            margin-top: 20px;
+        }
+
+        .app-logo img {
+            width: 140px;
+        }
+
+        .footer hr {
+            border: none;
+            background: #b5b5b5;
+            height: 1px;
+            margin: 20px 0;
+        }
+
+        .copyright {
+            text-align: center;
+        }
+
+        .menu-icon {
+            width: 28px;
+            margin-left: 20px;
+            display: none;
+        }
+
+        /*-----------media query menu--------*/
+        @media screen and (max-width : 800px) {
+            nav ul {
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background: #333;
+                width: 100%;
+                overflow: hidden;
+                transition: max-height 0.5s;
+            }
+
+            nav ul li {
+                display: block;
+                margin-right: 50px;
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+
+            nav ul li a {
+                color: #fff;
+            }
+
+            .menu-icon {
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        @media screen and (max-width : 600px) {
+            .row {
+                text-align: center;
+            }
+
+            .col-2,
+            .col-3,
+            .col-4 {
+                flex-basis: 100%;
+            }
+        }
+
+        @media screen and (max-width : 600px) {
+            #search {
+                text-align: center;
+            }
+
+            .col-2,
+            .col-3,
+            .col-4 {
+                flex-basis: 100%;
+            }
+        }
+
+        #changing-text {
+            font-size: 24px;
+            white-space: nowrap;
+            overflow: hidden;
+            border-right: 2px solid #000;
+            /* This creates the typing cursor effect */
+            animation: typing 3s steps(40, end) infinite;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+        }
+
+        #search {
+            width: 550px;
+            height: 50px;
+        }
+
+        #submit {
+            width: 50px;
+            height: 50px;
+        }
+        .new{
+            height :50px;
+            
+        }
+        .logo img {
+            border-radius: 50%;
+        }
+
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                <img src="IMAGES\logo.png" alt="error" width="125px"></div>
+
+                <nav>
+                    <ul id="MenuItes">
+                        <li><a href="">Exams</a></li>
+                        <li><a href="">College</a></li>
+                        <li><a href="Tool.html">Tools</a></li>
+                        <li><a href="Contact.html" class="call">Contact</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+
+            <div class="row">
+                <div class="col-2"><div class="new">
+                    <p id="changing-text"></p></div>
+
+                    <script>
+                        const textElement = document.getElementById("changing-text");
+                        const texts = [
+                            "Welcome to our website!",
+                            " Know more do more",
+                            "Join our community and learn more.",
+                            "Stay tuned for exciting updates.",
+                            "Thank you for visiting!"
+                        ];
+
+                        let currentIndex = 0;
+                        let currentText = texts[currentIndex];
+                        let charIndex = 0;
+
+                        function typeWriter() {
+                            if (charIndex < currentText.length) {
+                                textElement.textContent = currentText.substring(0, charIndex + 1);
+                                charIndex++;
+                                setTimeout(typeWriter, 100); // Delay between characters (adjust as needed)
+                            } else {
+                                setTimeout(eraseText, 1000); // Delay before erasing text (adjust as needed)
+                            }
+                        }
+
+                        function eraseText() {
+                            if (charIndex >= 0) {
+                                textElement.textContent = currentText.substring(0, charIndex);
+                                charIndex--;
+                                setTimeout(eraseText, 100); // Delay between erasing characters (adjust as needed)
+                            } else {
+                                currentIndex = (currentIndex + 1) % texts.length;
+                                currentText = texts[currentIndex];
+                                charIndex = 0;
+                                setTimeout(typeWriter, 550); // Delay before starting the next text (adjust as needed)
+                            }
+                        }
+
+                        // Start the loop
+                        typeWriter();
+                    </script>
+                   
+
+
+                    <form action="/search" method="get">
+                        <label for="search"></label>
+                        <input type="text" id="search" name="q" placeholder="Search for college or exams" />
+                        <input type="submit" id="submit" value="Search" />
+                    </form>
+
+
+                    <div class="col-2">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!----categories-->
+    <div class="categories">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-3">
+                    <img src="IMAGES\IIT-Bombay-310x205.webp" alt="error"><br>
+                    <p>Colleges</p>
+
+                </div>
+                <div class="col-3">
+                    <img src="IMAGES\tools-showcase.jpg" alt="error"><br>
+                    <p>Tools</p>
+                </div>
+
+                <div class="col-3">
+                    <img src="IMAGES\cutoff-showcase.jpg" alt="error"><br>
+                    <p>Cut-off</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="small-container">
+        <h2 class="title">TOP COLLEGES</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="IMAGES\IIT-Delhi-310x205.webp" alt="error">
+                <h4>IIT DELHI</h4>
+
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\IIT-BHU-310x205.webp" alt="error">
+                <h4>IIT BHU</h4>
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\IIT-Kanpur-310x205.webp" alt="error">
+                <h4>IIT KANPUR</h4>
+
+
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\BIT-Mesra-310x205.webp" alt="error">
+                <h4>BIT -MESRA</h4>
+
+
+            </div>
+        </div>
+        <h2 class="title">OTHER FIELD CUTT OFFS</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="IMAGES\USIT.JPG" alt="error">
+                <h4>GGSIPU(CUET)</h4>
+
+
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\125104-aiims-delhi.webp" alt="error">
+                <h4>AIMS DELHI</h4>
+
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\ARMY.webp" alt="error">
+                <h4>NDA(ARMY)</h4>
+
+            </div>
+            <div class="col-4">
+                <img src="IMAGES\exams-showcase.jpg" alt="error">
+                <h4>CUET</h4>
+
+            </div>
+
+        </div>
+    </div>
+    </div>
+    <h2 class="title">OUR SPONSORS </h2>
+    <div class="brands">
+        <div class="small-container">
+            <div class="row">
+                <div class="col-5">
+                    <img src="IMAGES\IBM.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="IMAGES\IPU.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="IMAGES\DU.jpeg" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="IMAGES\logo-paypal.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="IMAGES\logo-philips.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="footer-col-1">
+                    <h3>Download Our App</h3>
+                    <p>Download App for Android and ios mobile phone </p>
+                    <div class="app-logo">
+                        <img src="IMAGES\logo.png" alt="">
+                        <img src="IMAGES\play-store.png" alt="">
+
+                    </div>
+                </div>
+                <div class="footer-col-2">
+
+                    <p>Our motivate is to guide student in right direction
+                    </p>
+                </div>
+                <div class="footer-col-3">
+                    <h3>Useful links</h3>
+                    <ul>
+                        <li>Coupons</li>
+                        <li>Blog Post</li>
+                        <li>Return Policy</li>
+                        <li>Join Affliated</li>
+                    </ul>
+                </div>
+                <div class="footer-col-4">
+                    <h3>Follow us</h3>
+                    <ul>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                        <li>Instagram</li>
+                        <li>You tube</li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright"></div>
+            <p>Copyright 2023 - STUDENT GUIDE</p>
+        </div>
+    </div>
+    </div>
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+        MenuItems.style.maxHeight = "0px";
+        function menutoggle() {
+            if (MenuItems.style.maxHeight == "0px") {
+                MenuItems.style.maxHeight = "200px"
+            }
+            else {
+                MenuItems.style.maxHeight = "0px"
+            }
+        }
+    </script>
+</body>
+
+</html>

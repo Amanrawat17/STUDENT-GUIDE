@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Student Guide</title>
+    
+</head><style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f5f5f5;
+    }
+    
+    header {
+        background-color: #007BFF;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+    
+    .heading {
+        margin: 0;
+        font-size: 24px;
+    }
+    
+    .back-button {
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        margin-top: 10px;
+        display: inline-block;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        margin-top: 20px;
+    }
+    
+    .contact-info,
+    .contact-form {
+        background-color: #fff;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        width: 45%;
+    }
+    
+    .contact-info h2,
+    .contact-form h2 {
+        color: #333;
+        font-size: 20px;
+    }
+    
+    .contact-info p,
+    .contact-form label {
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    button {
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+</style>
+<body>
+    <header>
+        <h1 class="heading">Contact Us</h1>
+        <a href="index.html" class="back-button">Back</a>
+    </header>
+
+    <div class="container">
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:studentguide@example.com">studentguide@example.com</a></p>
+            <p>Office Number: +1 (123) 456-7890</p>
+        </div>
+        <div class="contact-form">
+            <h2>Contact Form</h2>
+            <form id="contact-form" onsubmit="return submitForm()">
+                <div class="input-container">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="input-container">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-container">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function submitForm() {
+            // Replace with your actual form submission logic here
+            // You can use AJAX to send the form data to your server
+            alert("Message sent successfully!");
+            return false; // Prevent form submission for this example
+        }
+    </script>
+</body>
+</html>

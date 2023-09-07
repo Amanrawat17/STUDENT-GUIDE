@@ -1,0 +1,174 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Guide - Login</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <meta name="google-signin-client_id" content="YOUR_GOOGLE_CLIENT_ID">
+</head><style>
+    body {
+        background: linear-gradient(to right, #4caf50, #2196f3);
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    .login-box {
+        background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+    }
+    
+    .heading {
+        color: #333;
+        font-size: 36px;
+        margin: 0;
+    }
+    
+    .subheading {
+        color: #555;
+        font-size: 18px;
+        margin-top: 5px;
+    }
+    
+    .input-container {
+        margin-top: 20px;
+        text-align: left;
+    }
+    
+    input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        font-size: 16px;
+        margin-top: 5px;
+    }
+    
+    button {
+        width: 100%;
+        background-color: #007BFF;
+        color: #fff;
+        border: none;
+        padding: 10px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+    
+    button:hover {
+        background-color: #0056b3;
+    }
+    
+    .options {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    
+    .separator {
+        margin: 0 10px;
+    }
+    
+    .g-signin2 {
+        display: inline-block;
+        margin-top: 5px;
+    }
+    
+    .get-help {
+        margin-top: 15px;
+        font-size: 14px;
+    }
+    
+    a {
+        color: #007BFF;
+        text-decoration: none;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+    
+</style>
+<body>
+        <div class="container">
+            <div class="login-box">
+                <h1 class="heading">StudentGuide</h1>
+                <p class="subheading">Welcome back! Please login.</p>
+                <form id="login-form" onsubmit="return validateForm()">
+                    <div class="input-container">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container">
+                        <input type="password" id="password" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="input-container" id="otp-container" style="display: none;">
+                        <input type="text" id="otp" name="otp" placeholder="OTP" required>
+                    </div>
+                    <button type="submit" id="login-button">Login</button>
+                    <div class="options">
+                        <a href="#" onclick="showOtpField()">Login with OTP</a>
+                        <span class="separator">·</span>
+                        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+                    </div>
+                </form>
+                <p class="get-help"><a href="#">Get Help</a></p>
+            </div>
+        </div>
+    
+        <script>
+            var isOtpLogin = false;
+    
+            function showOtpField() {
+                isOtpLogin = true;
+                document.getElementById("otp-container").style.display = "block";
+                document.getElementById("password").style.display = "none";
+                document.getElementById("login-button").innerHTML = "Login with OTP";
+            }
+    
+            function validateForm() {
+                if (isOtpLogin) {
+                    var otp = document.getElementById("otp").value;
+                    // Replace this with your actual OTP validation logic
+                    if (otp !== "") {
+                        // If OTP is valid, allow form submission
+                        return true;
+                    } else {
+                        alert("Please enter a valid OTP.");
+                        return false; // Prevent form submission
+                    }
+                } else {
+                    var email = document.getElementById("email").value;
+                    var password = document.getElementById("password").value;
+    
+                    // Replace this with your actual email/password validation logic
+                    if (email.trim() === "" || password.trim() === "") {
+                        alert("Please enter both email and password.");
+                        return false; // Prevent form submission
+                    }
+    
+                    // If email/password validation passes, allow form submission
+                    return true;
+                }
+            }
+    
+            function onSignIn(googleUser) {
+                // ... (previous onSignIn code) ...
+            }
+        </script>
+    </body>
+    </html>
+    
+</body>
+</html>

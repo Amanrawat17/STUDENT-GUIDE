@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@600&family=Edu+NSW+ACT+Foundation:wght@400;600&family=Libre+Baskerville&family=Lobster&family=Orbitron:wght@400;500&family=Oswald&family=Pacifico&family=Rowdies&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Guide...</title>
+    <style>
+	body{
+	scroll-behaviour:smooth;
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	}
+	.header{
+	margin-top:-30px;
+	position:sticky;
+	box-shadow:2px 2px 2px 2px wheat;
+	background-repeat:no-repeat;
+	background-size:50px;
+	background:url(https://img.freepik.com/free-vector/gradient-black-background-with-cubes_52683-76469.jpg);
+	}
+	
+  .head h1{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+	letter-spacing:3px;
+	padding:12px 0px 0px 12px;
+	font-size:35px;
+	color:wheat;
+	}
+	 nav{
+	 margin-top:-45px;
+	 display:flex;
+	 justify-content:flex-end;
+	 margin-right:35px;
+	text-align:right;
+	}
+	nav ul{
+	display:flex;
+	justify-content:center;
+	line-height:35px;
+	text-align:right;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	list-style:none;
+	}
+	nav ul li a{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Rowdies', cursive;
+	text-decoration:none;
+	color:wheat;
+	margin:25px;
+	}
+	nav ul li a:hover{
+	color:grey;
+	transition:0.3s ease;
+	cursor:pointer;
+	}
+	.active{
+	color:grey;
+	}
+	.icon {
+	transition:1s;
+	display:none;
+    position: absolute;
+    color: wheat;
+    font-size: 25px;
+    top: 27px;
+    right: 25px;
+}	.icons {
+display:none;
+     transform:rotate(180deg);
+	transition:1s;
+	display:none;
+    position: absolute;
+    color: wheat;
+    font-size: 25px;
+    top: 27px;
+    right: 25px;
+}
+	.main{
+	
+	background:linear-gradient(to right, #06060691, #06060691 ), url(https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D&w=1000&q=80);
+	height:600px;
+	margin-top:-30px;
+	display:flex;
+	align-item:center;
+	background-size:cover;
+	justify-content:center;
+	}
+	.main-cont{
+	box-shadow: 2px 2px white;
+	width:85%;
+	margin:80px 5px 80px 5px;
+	max-width:410px;
+	flex-direction:column;
+	padding:10px;
+	background:#333342;
+	border-radius:8px;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	}
+	.college{
+	border-radius:8px;
+	text-align:center;
+	
+	}
+	.college input{
+	width:90%;
+	text-align:center;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	line-height:30px;
+	margin:10px auto 20px auto;
+	}
+	::placeholder{
+	text-align:center;
+	}
+	.exam{
+display:none;
+	border-radius:8px;
+	text-align:center;
+	
+	}
+	.exam input{
+	width:90%;text-align:center;
+	border-radius:5px;
+	outline:none;
+	border:none;
+	line-height:30px;
+	margin:10px auto 20px auto;
+	}
+	.btn{
+	background:green;
+	border:none;
+	padding:10px;
+	font-size:12px;
+	color:white;
+	border-radius:8px;
+	margin-bottom:25px;
+	}
+	
+	.btn:hover{
+	transition:0.3s ease;
+	background:#4c9b39;
+	}
+	.college-btn{
+	background:transparent;
+	color:white;
+	border:none;
+	font-size:15px;
+	padding:10px;
+	margin:10px 10px 0px 10px;
+	border-radius:5px;
+	}
+	.college-btn:hover{
+	transition:0.3s ease;
+	background:#605757a3;
+	}
+	.btns{
+	margin-bottom:20px;
+	}
+	.exam-btn{
+		margin:10px 10px 0px 10px;
+	background:#8940e9;
+	color:white;
+	border:none;
+	font-size:15px	;
+	padding:10px;
+	border-radius:5px;
+	}
+	.exam-btn:hover{
+	transition:0.3s ease;
+	background:#8940e9a6;
+	}
+	.main-cont h3{
+	font-size:25px;
+	color:white;
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+letter-spacing:2px;
+	}
+	.content{
+	display:block;
+	width:90%;
+	padding:20px;
+	margin:30px auto;
+	background:#8278a352;
+	border-radius:8px;
+	}
+	.set-1 p{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+}
+	.content h2{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+
+	text-align:center;
+	font-size:45px;
+	}
+	#sea p{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+letter-spacing:1px;
+	font-size:20px;
+	}
+	.set{
+	display:none;
+	}
+	.set-1{
+	border-radius:5px;
+	height:270px;
+	width:100%;
+	margin:15px auto;
+	background:#eaf7c28a;
+	}
+	.set-1 img{
+	width:40%;
+	height:250px;
+	max-width:300px;
+	margin:10px 30px 10px 10px;
+	float:left;
+	border-radius:8px;
+	}
+	.set-1{;
+	}
+	.set-1 h3{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+font-family: 'Lobster', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oswald', sans-serif;
+
+	margin-bottom:-25px;
+	line-height:65px;
+	font-size:20px;
+	}
+	.set-1 button{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+border:none;
+	border-radius:5px;
+	color:white;
+	background:#000000b0;
+	font-siz:15px;
+	padding:5px;
+	}
+	.set-1 button:hover{
+	text-decoration:underline;
+	background:#00000073;
+	transition:0.5s;
+	}
+	.set-1 .yes{
+	font-family: 'Anton', sans-serif;
+font-family: 'Dancing Script', cursive;
+font-family: 'Edu NSW ACT Foundation', cursive;
+font-family: 'Libre Baskerville', serif;
+	cursor:pointer;
+
+	border-radius:5px;
+	color:white;
+	background:#6e3cbfd6;
+	font-siz:15px;
+	padding:5px;
+	margin-left:30px;
+
+	}
+	.set-2{
+	display:none;
+	}
+	.set-1 a{
+	color:white;
+	text-decoration:none;
+	}
+	#valid {
+	display:none;
+    width: 90%;
+    font-family: 'Anton', sans-serif;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Edu NSW ACT Foundation', cursive;
+    font-family: 'Libre Baskerville', serif;
+    /* font-family: 'Lobster', cursive; */
+    /* font-family: 'Orbitron', sans-serif; */
+    /* font-family: 'Oswald', sans-serif; */
+    margin-top: 1px;
+    margin-bottom: 1px;
+    height: 10px;
+    padding: 5px 5px 10px 5px;
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    background: #ff0b0b29;
+    border-top: 2px solid red;
+    border-bottom: 2px solid red;
+}	.error{
+	text-align:center;
+	color:blue;
+	}
+	.error h3{
+	font-size:25px;
+	}
+	.error h5{
+	font-size:22px;
+	}
+	@media(max-width:800px){
+	.set-1 h3 {
+	line-height:5px;
+	margin-bottom:0px;
+	}
+	.set-1 .yes{
+	margin-left:0px;
+	}
+	.new{
+	padding-bottom: 20px;
+    margin:20px;
+	}
+	.content{
+	width:97%;
+	}
+	.set-1{
+	height:auto;
+	}
+	.set-1 img {
+    float: none;
+    width: 95%;
+    max-width: none;
+    height: none;
+    margin: 2.5%;
+}	.set{
+	overflow:none;
+	}
+	.icon{	
+	display:block;
+	}
+	h1{
+	margin-bottom:60px;
+	}
+	.nav ul {
+	transition:0.5 ease;
+    width: 100%;
+    display: none;
+	width:100%;
+    justify-content: center;
+    /* line-height: 35px; */
+    /* text-align: right; */
+    /* display: flex; */
+    /* align-items: center; */
+    /* justify-content: center; */
+    list-style: none;
+    /* flex-wrap: wrap; */
+    flex-direction: column;
+}
+    
+	
+	}
+	</style>
+  </head>
+  <body>
+	 <section id='header' class='header'>
+	   <div class='head'>
+	   <h1>Student Guide</h1>
+	   </div>
+	   
+	   <nav class='nav'> 
+	    <ul id ='menu'>
+		 <li><a href='STUDENTGUIDE.html'>Home</a></li>
+		 <li><a href=''>Colleges</a></li>
+		 <li><a href=''>Exam</a></li>
+		 <li><a href='login.html'>Login</a></li>
+		 <li><a class='active' href='Tool.html'>Tools</a></li>
+		 <li><a href='Contact.html'>Contact</a></li>
+		
+	   </nav>
+	   <i onclick='menu()' id='icon' class=" icon fa-solid fa-caret-down"></i>
+	   <i onclick='menus()' id='icons' class=" icons fa-solid fa-caret-down"></i>
+	    
+     </section>
+     
+	 <section class='main'>
+	   <div class='main-cont'>
+	       <div class='btns'>
+			<button onclick='college()' id='college-btn' class='college-btn'>College</button>
+			<button onclick='exam()' id='exam-btn' class='exam-btn'>Exam</button>
+			
+		    </div>
+			 <h6 id='valid'></h6>
+	     <div id='college' class='college'>
+		  <h3>Predict college by CUET scores !! </h3>
+		  <input type='name' id='name' placeholder='Enter your full name' required>
+		  <input type='number' id='per' placeholder='Enter your 12th marks (%)'>
+		  <input type='number' id='rank' placeholder='Enter your CUET rank'>
+		  <button class='btn' onclick =' rank()' >Search Colleges</button>
+		 </div>
+		 
+		 <div id='exam' class='exam'>
+		  <h3>Predict college by Exam Rank !! </h3>
+		  <input type='name' id='name2' placeholder='Enter your full name ' required >
+		  <input type='number' id='per2' placeholder='Enter your 12th marks (%)'>
+		  <input type='number' id='jee' placeholder='Enter your JEE rank'>
+		   <button class='btn' onclick='getty()' >Search Colleges</button>
+		  
+		 </div>
+	   </div>
+	  
+	 </section>
+  
+  
+  <section class='content' id='content'>
+	<h2>College Search...</h2>
+    <div id='sea'>
+	<p>Welcome <span id='student'></span> ,This is the list of colleges we could find for you!!</p>
+	</div>
+    
+	<div class='set' id='set'>
+		<div class='set-1'>
+		  <img src='https://www.duupdates.in/wp-content/uploads/2017/07/Motilal-Nehru-College-1200x900.jpg'>
+		  <div class='new'>
+		  <h3>Motilal Nehru College</h3>
+		  <p>Motilal Nehru College is one of the largest constituent colleges of Delhi University. The year 2014 marks the Golden Jubilee of the college.<br><br>The College has a rich collection of books, journals and periodicals at present count, the college has 1,07,586 volumes. The library subscribers to about 86 periodicals and magazines of scientific and general interest. </p>
+		  
+		     <button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		     <span class='yes'><abbr title='University of Delhi'>D U</abbr></span>
+	     </div>
+		</div>
+		<div class='set-1'>
+		  <img src='data:image/jpeg;base64,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'>
+		  <div class='new'>
+		  <div class='next'>
+		  <h3>Maitryi College of Girls</h3>
+		  <p>Recognition of Maitreyi College as ‘Knowledge Centre’ in pursuit of Women Empowerment.Maitreyi College founded in 1967, is an eminent constituent college of University of Delhi, offering quality education to women. Academic excellence is an established tradition of the college, accompanied with continuous achievements.<Br>Ragging is strictly prohibited and will invite suspension from College</p>
+		     <button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		    <span class='yes'><abbr title='University of Delhi'>D U</abbr></span>
+			 </div>
+	     </div>
+		</div>
+		
+		<div class='set-1'>
+		  <img src='https://www.gdgoenkagzb.com/wp-content/uploads/2019/11/IMG-20190926-WA0013.jpg'>
+		  <div class='new'>
+		  <h3>GD Goenka University, Gurugram</h3>
+			<p>At GD Goenka University, excellence is what we strive to achieve. Our infrastructure, faculty, vision, ideals and teaching methods make us a premier University in Gurgaon. Our University in Delhi NCR, allows you to delve into a plethora of courses that are available across the website.<br> Besides, as the top-ranking University in Gurgaon, we have the best teaching faculties that help you walk the path of success
+		     </p><button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		   <span class='yes'><abbr title='GD Goenka University'>G G U</abbr></span>
+	     </div>
+		</div></div>
+		
+		<div class='set-2' id ='set-2'>
+		<div class='set-1'>
+			<div class='new'>
+		 <img src='https://www.collegebatch.com/static/clg-gallery/pgdav-college-evening-new-delhi-213960.jpg'>
+		  <h3>PGDAV COLLEGE (Evening)</h3>
+				<p>Welcome to PGDAV COLLEGE (Evening), an illustrious member of the vast DAV family - the largest non-government educational organization in the country.At PGDAV (Evening) we have a competent teaching faculty backed by an ever-helpful administrative staff and adequate infrastructure.<br>hey will inspire you to excel by getting in touch with the power that lies hidden within you</p>
+		     <button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		     <span class='yes'><abbr title='University of Delhi'>D U</abbr></span>
+	     </div>
+		</div>
+		
+		<div class='set-1'>
+		  <img src='https://media.getmyuni.com/azure/college-image/big/rajdhani-college-delhi-university-new-delhi.jpg'>
+		  <div class='new'>
+		  <h3>Rajdhani College</h3>
+			<p>Rajdhani College was established in 1964 by the Delhi Administration in Kirti Nagar, New Delhi under the name of Government College and was renamed as Rajdhani College when the Delhi administration vested its governance in an autonomous Governing Body. Rajdhani College is a constituent college of the University of Delhi and has completed 50 glorious years of academic excellence.</p>
+		<button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		     <span class='yes'><abbr title='University of Delhi'>D U</abbr></span>
+	     </div>
+		</div>
+		
+		<div class='set-1'>
+		  <img src='https://www.gdgoenkagzb.com/wp-content/uploads/2019/11/IMG-20190926-WA0013.jpg'>
+		  <div class='new'>
+		  <h3>Aryabhatta College</h3>
+			<p>maintained by University of Delhi and named after the ancient Indian mathematician Aryabhatta. As mentioned, It is an institution directly maintained by the University of Delhi. The college is located in South Delhi at Benito Juarez Marg, Delhi, South Campus. </p>
+		     </p><button><a href=''>Website</a></button>
+		     <button><a href=''>Location</a></button>
+		    <span class='yes'><abbr title='University of Delhi'>D U</abbr></span>
+	     </div>
+		</div>
+		</div>
+	<div class='error' id='error'>
+	<img src="https://thumbs.gfycat.com/NextUnkemptAmericanredsquirrel-max-1mb.gif">
+	<h3>Site Still in progress...</h3>
+	<h5>Will be restored soon !</h5>
+	</div>
+  </section>
+	<script>
+	
+	function menu(){
+	let menu = document.getElementById('menu');
+	menu.style.display = 'flex';
+	
+	
+	let icons = document.getElementById('icons');
+	let icon = document.getElementById('icon');
+    
+	icon.style.display = 'none';
+	icons.style.display = 'block';
+	}
+	
+	function menus(){
+	let menu = document.getElementById('menu');
+	menu.style.display = 'none';
+	let icon = document.getElementById('icon');
+	let icons = document.getElementById('icons');
+	
+	icons.style.display = 'none';
+	icon.style.display = 'block';
+	}
+	function college(){
+	let btn1 = document.getElementById('college-btn');
+	btn1.style.background = 'transparent';
+	let btn2 = document.getElementById('exam-btn');
+	btn2.style.background = '#8940e9';
+	let college = document.getElementById('college');
+	let exam = document.getElementById('exam');
+	
+	college.style.display = 'block';
+	exam.style.display = 'none';
+	}
+	
+	function exam(){
+	let btn1 = document.getElementById('exam-btn');
+	btn1.style.background = 'transparent';
+	let btn2 = document.getElementById('college-btn');
+	btn2.style.background = '#8940e9';
+	let college = document.getElementById('college');
+	let exam = document.getElementById('exam');
+	college.style.display='none';
+	exam.style.display='block';
+	}
+	
+	
+	
+	function clear(){
+	let valid = document.getElementById('valid');
+	valid.style.display ='none';
+	}
+	function rank(){
+	let content = document.getElementById('content');
+	let valid = document.getElementById('valid');
+	let set = document.getElementById('set');
+	let settwo = document.getElementById('set-2');
+	let name = document.getElementById('name').value;
+	let per = document.getElementById('per').value;
+	let rank = document.getElementById('rank').value;
+	let student = document.getElementById('student');
+	student.innerHTML = name;
+	
+	if( per <40){
+			valid.style.display='block';
+			valid.innerHTML ='Marks percentage must be greater or equals to 40';
+			const myTime = setTimeout(clear, 5000);
+			}
+	else if( per >100){
+			valid.style.display='block';
+			valid.innerHTML ='Marks percentage must be less than or equals to 100';
+			const myTime = setTimeout(clear, 5000);
+			}
+	else if( name =''){
+			valid.style.display='block';
+			valid.innerHTML ='Enter a valid name';
+			const myTime = setTimeout(clear, 5000);
+			}
+	else if( rank <=0){
+			valid.style.display='block';
+			valid.innerHTML ='Enter a valid Rank';
+			const myTime = setTimeout(clear, 5000);
+			}
+	else if ( per >=60 && rank <=2000){
+				content.style.display = 'block';
+				set.style.display='block';
+				settwo.style.display='block'
+				student.innerHTML =name;
+				const myTime = setTimeout(clear, 5000);
+				content.scrollIntoView({
+				block: 'start',
+				behavior: 'smooth',
+				inline: 'center'
+				});
+				}
+	
+	else if(per >=60 && rank <=4000){
+			content.style.display = 'block';
+			set.style.display='none';
+			settwo.style.display='block'
+				student.innerHTML =name;
+				content.scrollIntoView({
+				block: 'start',
+				behavior: 'smooth',
+				inline: 'center'
+				});
+			}
+	
+			}
+			
+	function getty(){
+	let content = document.getElementById('content');
+	
+	let error = document.getElementById('error');
+	let name = document.getElementById('name2').value;
+	let per = document.getElementById('per2').value;
+	let rank = document.getElementById('jee').value;
+	let student = document.getElementById('student');
+	student.innerHTML == name;
+	content.style.display = 'block';
+	error.style.display = 'block';
+	content.scrollIntoView({
+	block:'start',
+	behavior:'smooth',
+	inline:'center'
+	});
+	}
+	</script>
+  </body>
+</html>
