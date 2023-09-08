@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Exams Portal</title>
+
+</head>
+<style>/* Your existing CSS code */
+
+    /* Add media query for screens smaller than 768px (typical mobile phones) */
+    @media (max-width: 768px) {
+        /* Header styles for mobile */
+        header {
+            padding: 10px;
+        }
+    
+        nav ul {
+            flex-direction: column;
+        }
+    
+        nav li {
+            margin: 10px 0;
+        }
+    
+        .search-bar {
+            flex-direction: column;
+        }
+    
+        .search-bar input[type="text"] {
+            margin-right: 0;
+            margin-bottom: 10px;
+        }
+    
+        .search-bar button[type="submit"] {
+            margin: 0;
+        }
+    
+        /* Content styles for mobile */
+        .content {
+            padding: 10px;
+        }
+    
+        h2 {
+            font-size: 20px;
+        }
+    
+        /* Footer styles for mobile */
+        footer {
+            padding: 10px;
+        }
+    
+        footer h2 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+    
+        /* Additional mobile-specific styles as needed */
+    
+        /* Example: Adjust the font size for links in the footer */
+        footer a {
+            font-size: 16px;
+        }
+    
+        /* Example: Reduce the size of the footer logo for mobile */
+        .footer-logo img {
+            width: 80px;
+        }
+    
+        /* Example: Adjust the padding of list items in the footer */
+        footer li {
+            margin-bottom: 5px;
+        }
+    }
+    
+    
+    @keyframes blink {
+        0% { visibility: hidden; }
+        50% { visibility: visible; }
+    }
+
+    .blink-text {
+        animation: blink 2s step-end infinite;
+    }
+    /* Reset some default styles */
+    body,
+    h1,
+    h2,
+    p,
+    ul,
+    li {
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Global styles */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: #333;
+        color: #fff;
+        padding: 20px;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+    }
+
+    nav li {
+        margin-right: 20px;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: bold;
+    }
+
+    .search-bar {
+        display: flex;
+        align-items: center;
+    }
+
+    .search-bar input[type="text"] {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin-right: 10px;
+    }
+
+    .search-bar button[type="submit"] {
+        background-color: #0074cc;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h2 {
+        color: #333;
+        font-size: 24px;
+        margin-top: 20px;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    ul li {
+        margin-bottom: 10px;
+    }
+
+    ul li a {
+        text-decoration: none;
+        color: #0074cc;
+        font-weight: bold;
+    }
+
+    .popular-exams ul {
+        margin-top: 10px;
+    }
+
+    .latest-news ul {
+        margin-top: 10px;
+    }
+
+    footer {
+        background-color:black;
+        color: #fff;
+        padding: 20px;
+    }
+
+    footer h2 {
+        color: #fff;
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    footer section {
+        margin-bottom: 20px;
+    }
+
+    footer section a {
+        text-decoration: none;
+        color: #fff;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Footer container styles */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    background-color:black;
+    color: #fff;
+    padding: 20px;
+}
+
+/* Section styles */
+footer section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+footer h2 {
+    font-size: 18px;
+}
+
+footer ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+footer li {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Social media section styles */
+.social-media {
+    text-align: center;
+}
+
+.social-media ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media li {
+    margin: 5px 0;
+}
+
+/* Footer logo styles */
+.footer-logo {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer-logo img {
+    width: 100px;
+}
+
+/* Copyright text styles */
+footer p {
+    text-align: center;
+    background-color:black ;
+    color: #fff;
+    margin: 0;
+    padding: 10px 0;
+}
+
+    /* Define a CSS class for styling images */
+
+
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">Entrance Exams</div>
+            <ul>
+                <li><a href="work.html">News</a></li>
+                <li><a href="index.html">Colleges</a></li>
+                <li><a href="Exam.html">Exams</a></li>
+                <li><a href="work.html">Admission</a></li>
+                <li><a href="Tool.html">Tools</a></li>
+                <li><a href="work.html">Forum</a></li>
+            </ul>
+            <div class="search-bar">
+                <input type="text" placeholder="Search...">
+                <button type="submit">Search</button>
+            </div>
+        </nav>
+    </header>
+
+    <section class="content">
+        <!-- Entrance Exams -->
+        <h2>Entrance Exams</h2>
+        <ul>
+          
+                    <li>  
+                        <a href="https://www.bitsadmission.com/" class="exam-link">
+                            <img src="IMAGES\BITS-Pilani-310x205.webp" alt="BITSAT Image">
+                            <p  class="read-more">Read More about</p>
+                        </a>
+                        <a href="https://www.bitsadmission.com/" class="exam-title">BITSAT</a>
+                    </li>
+                    <li>
+                        <a href="https://jeemain.nta.nic.in/login/" class="exam-link">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSiHG8y0k79ACOC2o2ep3aT022IvRAkxslQsg&usqp=CAU"
+                                alt="Joint Entrance Exam (Main) Image">
+                                <p  class="read-more">Read More about </p>
+                        </a>
+                        <a href="https://jeemain.nta.nic.in/login/" class="exam-title">Joint entrance exam (Main)</a>
+                    </li>
+                    <li>
+                        <a href="https://www.jeeadv.ac.in/" class="exam-link">
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBT-hwlsoioJSS2cxQRyhSg0bSkGFIAf5IBw&usqp=CAU"
+                                alt="Joint Entrance Exam (Advanced) Image">
+                                <p  class="read-more">Read More about</p>
+                        </a>
+                        <a href="https://www.jeeadv.ac.in/" class="exam-title">Joint entrance exam (Advanced)</a>
+                    </li>
+
+
+                    <li>
+                        <a href="https://www.upes.ac.in/" class="exam-link">
+                            <img
+                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRsUnIzGwDmQ20fer1Di7lCR63Q7Q_ERi7fig&usqp=CAU">
+                                <p  class="read-more">Read More about</p> </a>
+                        <a href="https://www.upes.ac.in/" class="exam-title">UPES Engineering Aptitude Test </a>
+
+                    </li>
+                    <li>
+                        <a href="http://www.ipu.ac.in/" class="exam-link">
+                            <img src="IMAGES\ipuv.jpeg">
+                            <p  class="read-more">Read More about</p> </a>
+                        <a href="http://www.ipu.ac.in/" class="exam-title">Indraprastha University Common Entrance Test
+                        </a>
+
+                    </li>
+                    <li>
+                        <a href="https://www.iiseradmission.in/" class="exam-link">
+                            <img src="IMAGES\IISER.jpeg">  <p  class="read-more">Read More about</p>
+                            <a href="https://www.iiseradmission.in/" class="exam-title">IISER Aptitude Test </a>
+
+                    </li>
+                    <li>
+                        <a href="https://www.amrita.edu/admissions/btech/" class="exam-link">
+                            <img src="IMAGES\IISSS.jpeg">  <p  class="read-more">Read More about</p>
+                        </a>
+                        <a href="https://www.isical.ac.in/~admission/" class="exam-title">Indian Statistical Institute
+                            Admission
+                            Test </a>
+
+                    </li>
+                    <li>
+                        <a href="https://eamcet.tsche.ac.in/" class="exam-link">
+                            <img src="IMAGES\TELGANA.png">  <p  class="read-more">Read More about</p>
+                        </a>
+                        <a href="https://eamcet.tsche.ac.in/" class="exam-title">Telangana State Engineering,
+                            Agriculture and
+                            Medical Common Entrance Test </a>
+
+                    </li>
+                </div>
+            </div>
+        </ul>
+
+        <!-- Popular Exams -->
+        <section class="popular-exams">
+            <h2>Popular Exams</h2>
+            
+            <ul>
+                <li >Joint Entrance Examination (Main)</li>
+                <li>Joint Entrance Examination (Advanced)</li>
+                <li>BITS Admission Test</li>
+                <li>Manipal Entrance Test</li>
+                <li>SRM Joint Engineering Entrance Exam</li> 
+            </ul>
+            
+        </section>
+    </section>
+
+    <aside class="latest-news">
+        <h2>Latest News</h2>
+        <ul>
+            <li class="blink-text"><a href="#">Engineering Entrance Exams/Admissions 2024: Applications Open</a></li>
+            <li class="blink-text"><a href="#">BITS Admissions 2023: Iteration 7 Result Declared</a></li>
+            <li class="blink-text"><a href="#">GGSIPU B.Tech. Admissions 2023: Round 3 Result Declared</a></li>
+            <!-- Add more news items -->
+        </ul>
+    </aside>
+
+    <footer>
+        <div class="footer-container">
+            <section class="colleges">
+                <h2>Colleges</h2>
+                <ul>
+                    <li><a href="#">Statewise Colleges</a></li>
+                    <li><a href="#">Explore All IITs</a></li>
+                    <li><a href="#">Explore All NITs</a></li>
+                    <li><a href="#">Explore All IIITs</a></li>
+                    <li><a href="#">Explore All IISERs</a></li>
+                </ul>
+            </section>
+    
+            <section class="exam-tools">
+                <h2>Exam Tools</h2>
+                <ul>
+                    <li><a href="#">College Finder</a></li>
+                    <li><a href="#">JEE (Main) Rank Predictor</a></li>
+                    <li><a href="#">JEE (Main) College Predictor</a></li>
+                    <li><a href="#">JEE (Advanced) College Predictor</a></li>
+                    <li><a href="#">BITSAT College Predictor</a></li>
+                    <li><a href="#">JAC Delhi College Predictor</a></li>
+                </ul>
+            </section>
+    
+            <section class="company-info">
+                <h2>Company</h2>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Media Kit</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </section>
+    
+            <section class="social-media">
+                <h2>Follow Us</h2>
+                <ul>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Coupons</a></li>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                </ul>
+            </section>
+        </div>
+    
+        <div class="footer-logo">
+            <img src="IMAGES\logo.png" alt="Student Logo">
+        </div>
+    
+        <p>&copy; Copyright@Student guide</p></footer>
+    
+</body>
+
+</html>
