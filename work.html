@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Guide</title>
+  
+</head><style>
+    #development-container {
+        text-align: center;
+        position: relative;
+        padding: 50px;
+    }
+    
+    #development-image {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    #development-text {
+        font-size: 18px;
+        font-weight: bold;
+        color: #333;
+        margin-top: 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+</style>
+<body>
+    <div id="development-container">
+        <img id="development-image" src="IMAGES\Under constuction.jpg" alt="Under Development">
+        <p id="development-text">This student guide site is in development mode, still in progress, please wait.</p>
+    </div>
+    <script >// Get the development text and image elements
+        const developmentText = document.getElementById('development-text');
+        const developmentImage = document.getElementById('development-image');
+        
+        // Function to hide the development message and image
+        function hideDevelopmentMessage() {
+            developmentText.style.display = 'none';
+            developmentImage.style.display = 'none';
+        }
+        
+        // Add a button to hide the message
+        const hideButton = document.createElement('button');
+        hideButton.textContent = 'Hide';
+        hideButton.addEventListener('click', hideDevelopmentMessage);
+        
+        // Append the button to the container
+        developmentContainer.appendChild(hideButton);
+        </script>
+</body>
+</html>
