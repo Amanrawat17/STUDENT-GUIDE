@@ -1,114 +1,89 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STUDENT GUIDE</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Poppins', sans-serif;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-            padding: 20px;
-        }
-
-        nav {
-            flex: 1;
-            text-align: right;
-        }
-
-        nav ul {
-            display: inline-block;
-            list-style-type: none;
-        }
-
-        nav ul li {
-            display: inline-block;
-            margin-right: 20px;
-        }
-
-        a {
-            text-decoration: none;
-            color: #FFFFFF;
-        }
-
-        p {
-            color: #FFFFFF;
-        }
-
-        .container {
-            max-width: 1300px;
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Guide</title>
+	 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <style>
+  img{
+  margin:5px 30px 5px 20px;
+  }
+  .navbar{
+  cursor:pointer;
+  }
+  .navbar li{
+  
+  margin-right:30px;
+  }
+  .navbar-nav{
+  margin-left:170px;
+  }
+   .cont {	
+			width:90%;
             margin: auto;
-            padding-left: 25px;
-            padding-right: 25px;
+           
         }
-
-        .row {
-            display: flex;
-            align-items: center;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        .col-2 {
-            flex-basis: 50%;
-            min-width: 300px;
-        }
-
+		#changing-text{
+		color:red;
+		font-size:41px;
+			height:55px;
+			}
+        
+       .col-2 {
+	   text-align:center;
+    display: flex;
+    margin: auto;
+    width: 90%;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
         .col-2 img {
             max-width: 100%;
-            padding: 50px 0;
+            
         }
-
+		
         .col-2 h1 {
             font-size: 50px;
             line-height: 60px;
-            margin: 25px 0;
+            margin-top:25px;
         }
+		#form{
+			margin:auto;
+		max-width:900px;
+		width:100%;
+		}
+		
+		#search{
+		margin:auto;
+		max-width:800px;
+		border-radius:5px;
+		outline:2px solid black;
+		width:70%;
+		}
+		#submit{
+		padding:5px 12px;
 
-        .btn {
-            display: inline-block;
-            background: #1270eb;
-            color: #a0eb16;
-            padding: 8px 30px;
-            margin: 30px 0;
-            border-radius: 30px;
-            transition: background 0.5s;
-        }
-
-        .btn:hover {
-            background: #56565674;
-        }
-
-        .header {
-           background-image: url("gradient-black-background-with-cubes_52683-76469.webp");
-            background-size: cover;
-            /* This ensures the image covers the entire header */
-            background-position: center;
-            /* This centers the image horizontally and vertically */
-            height: 500px;
-            /* Set the desired height for the header */
-            width: 1400px;
-        }
-
-
-        .header-row {
-            margin-top: 70px;
-        }
-
-        .categories {
+		border:none;
+		border-radius:5px;
+		background:green;
+		color:white;
+		}
+		.header{
+		margin-top:50px;
+		width:100%;
+		}
+	@media(max-width:850px){
+	#changing-text{
+	font-size:30px;
+	height:35px;
+	}
+	}
+	
+	 .categories {
             margin: 70px 0;
         }
 
@@ -166,6 +141,12 @@
             color: #555;
             font-weight: normal;
         }
+
+        /* Set a fixed height for the images in col-4 divs */
+.col-4 img {
+    max-width: 100%;
+    height: 150px; /* Adjust the height to your preference */
+}
 
         .col-4 {
             font-size: 14px;
@@ -325,40 +306,13 @@
         }
 
         /*-----------media query menu--------*/
-        @media screen and (max-width : 800px) {
-            nav ul {
-                position: absolute;
-                top: 70px;
-                left: 0;
-                background: #333;
-                width: 100%;
-                overflow: hidden;
-                transition: max-height 0.5s;
-            }
-
-            nav ul li {
-                display: block;
-                margin-right: 50px;
-                margin-top: 10px;
-                margin-bottom: 10px;
-            }
-
-            nav ul li a {
-                color: #fff;
-            }
-
-            .menu-icon {
-                display: block;
-                cursor: pointer;
-            }
-        }
+       
+            
 
         @media screen and (max-width : 600px) {
-            .row {
-                text-align: center;
-            }
+           
 
-            .col-2,
+            
             .col-3,
             .col-4 {
                 flex-basis: 100%;
@@ -366,11 +320,7 @@
         }
 
         @media screen and (max-width : 600px) {
-            #search {
-                text-align: center;
-            }
-
-            .col-2,
+           
             .col-3,
             .col-4 {
                 flex-basis: 100%;
@@ -392,143 +342,74 @@
             }
         }
 
-        #search {
-            width: 550px;
-            height: 50px;
-        }
+       
 
-        #submit {
-            width: 50px;
-            height: 50px;
-        }
+        
         .new{
             height :50px;
             
         }
         .logo img {
             border-radius: 50%;
-        }
-        @media screen and (max-width: 768px) {
-    .container {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .logo {
-        margin-bottom: 20px;
-    }
-
-    nav {
-        text-align: center;
-    }
-
-    nav ul {
-        display: none;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .menu-icon {
-        display: block;
-        cursor: pointer;
-    }
-
-    .col-2 {
-        flex-basis: 100%;
-    }
-
-    #search {
-        width: 100%;
-        max-width: 100%;
-        margin-top: 20px;
-    }
-
-    #submit {
-        width: 100%;
-        max-width: 100px;
-        margin-top: 20px;
-    }
-
-    .header {
-        height: auto;
-    }
-
-    #changing-text {
-        font-size: 18px;
-    }
-}
-/* Mobile responsiveness for search form */
-.search-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-top: 20px;
+        }	
+        /* Add CSS for the fluid transition effect */
+.category-link {
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.search-form input[type="text"] {
-    width: 100%;
-    max-width: 300px; /* Adjust the max-width as needed */
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-}
-
-.search-form input[type="submit"] {
-    width: 100%;
-    max-width: 300px; /* Adjust the max-width as needed */
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    padding: 10px;
-    cursor: pointer;
+.category-link:hover {
+    transform: scale(1.1);
 }
 
 
-    </style>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,600&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  </style>
+  </head>
+  
+  
+  <body>
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+  <img src='IMAGES\logo.png' width='50px' height='50px'>
+    <a class="navbar-brand" href="#">Student Guide</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Exam.html">Exam</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="work.html">College</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="Tool.html">Tools</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="Contact.html">Contact</a>
+        </li>
+		 <li class="nav-item">
+          <a class="nav-link" href="login.html">Login</a>
+        </li>
+       
+      </ul>
+    </div>
+  </div>
+</nav>
 
-<body>
-
-    <div class="header">
-        <div class="container">
-            <div class="navbar">
-                <div class="logo">
-                <img src="IMAGES\logo.png" alt="error" width="125px"></div>
-
-                <nav>
-                    <ul id="MenuItes">
-                        <li><a href="Exam.html">Exams</a></li>
-                        <li><a href="work.html">College</a></li>
-                        <li><a href="Tool.html">Tools</a></li>
-                        <li><a href="Contact.html" class="call">Contact</a></li>
-                        <li><a href="login.html">Login</a></li>
-                    </ul>
-                </nav>
-
-            </div>
-
-            <div class="row">
-                <div class="col-2"><div class="new">
-                    <p id="changing-text"></p></div>
+<div class='header'>
+	<div class='cont'>
+	<div class="row">
+                <div class="col-2">
+					<div class="new">
+                    <p id="changing-text"></p>
+					</div>
 
                     <script>
                         const textElement = document.getElementById("changing-text");
@@ -573,91 +454,106 @@
                    
 
 
+                    <form id='form' action="/search" method="get">
+                        <label for="search"></label>
+                        <input type="text" id="search" name="q" placeholder="Search for college or exams" />
+                        <input type="submit" id="submit" value="Search" />
+                    </form>
+
+
                     
-
-
-                    <div class="col-2">
-                        <form action="/search" method="get">
-                            <label for="search"></label>
-                            <input type="text" id="search" name="q" placeholder="Search for college or exams" />
-                            <input type="submit" id="submit" value="Search" />
-                        </form>
-    
+                    
                     </div>
                 </div>
             </div>
         </div>
-    </div><!----categories-->
-    <div class="categories">
-        <div class="small-container">
-            <div class="row">
-                <div class="col-3">
-                    <img src="IMAGES\IIT-Bombay-310x205.webp" alt="error"><br>
+	
+	<div class="categories">
+    <div class="small-container">
+        <div class="row">
+            <div class="col-3">
+                <a href="https://www.iitb.ac.in/" class="category-link">
+                    <img src="IMAGES\IIT-Bombay-310x205.webp" alt="Colleges">
+                    <br>
                     <p>Colleges</p>
-
-                </div>
-                <div class="col-3">
-                    <img src="IMAGES\tools-showcase.jpg" alt="error"><br>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="Tool.html" class="category-link">
+                    <img src="IMAGES\tools-showcase.jpg" alt="Tools">
+                    <br>
                     <p>Tools</p>
-                </div>
-
-                <div class="col-3">
-                    <img src="IMAGES\cutoff-showcase.jpg" alt="error"><br>
+                </a>
+            </div>
+            <div class="col-3">
+                <a href="work.html" class="category-link">
+                    <img src="IMAGES\cutoff-showcase.jpg" alt="Cut-off">
+                    <br>
                     <p>Cut-off</p>
-                </div>
+                </a>
             </div>
         </div>
     </div>
+</div>
+
     <div class="small-container">
         <h2 class="title">TOP COLLEGES</h2>
         <div class="row">
             <div class="col-4">
-                <img src="IMAGES\IIT-Delhi-310x205.webp" alt="error">
-                <h4>IIT DELHI</h4>
-
+                <a href="https://www.iitd.ac.in/" class="college-link">
+                    <img src="IMAGES\IIT-Delhi-310x205.webp" alt="IIT Delhi">
+                    <h4>IIT DELHI</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\IIT-BHU-310x205.webp" alt="error">
-                <h4>IIT BHU</h4>
+                <a href="https://www.iitbhu.ac.in/" class="college-link">
+                    <img src="IMAGES\IIT-BHU-310x205.webp" alt="IIT BHU">
+                    <h4>IIT BHU</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\IIT-Kanpur-310x205.webp" alt="error">
-                <h4>IIT KANPUR</h4>
-
-
+                <a href="https://www.iitk.ac.in/" class="college-link">
+                    <img src="IMAGES\IIT-Kanpur-310x205.webp" alt="IIT Kanpur">
+                    <h4>IIT KANPUR</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\BIT-Mesra-310x205.webp" alt="error">
-                <h4>BIT -MESRA</h4>
-
-
+                <a href="https://www.bitmesra.ac.in/" class="college-link">
+                    <img src="IMAGES\BIT-Mesra-310x205.webp" alt="BIT -MESRA">
+                    <h4>BIT -MESRA</h4>
+                </a>
             </div>
         </div>
         <h2 class="title">OTHER FIELD CUTT OFFS</h2>
         <div class="row">
             <div class="col-4">
-                <img src="IMAGES\USIT.JPG" alt="error">
-                <h4>GGSIPU(CUET)</h4>
-
-
+                <a href="https://www.ipu.ac.in/" class="college-link">
+                    <img src="IMAGES\USIT.JPG" alt="GGSIPU(CUET)">
+                    <h4>GGSIPU(CUET)</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\125104-aiims-delhi.webp" alt="error">
-                <h4>AIMS DELHI</h4>
-
+                <a href="https://www.aiims.edu/" class="college-link">
+                    <img src="IMAGES\125104-aiims-delhi.webp" alt="AIMS DELHI">
+                    <h4>AIMS DELHI</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\ARMY.webp" alt="error">
-                <h4>NDA(ARMY)</h4>
-
+                <a href="https://www.nda.nic.in/" class="college-link">
+                    <img src="IMAGES\ARMY.webp" alt="NDA(ARMY)">
+                    <h4>NDA(ARMY)</h4>
+                </a>
             </div>
             <div class="col-4">
-                <img src="IMAGES\exams-showcase.jpg" alt="error">
-                <h4>CUET</h4>
-
+                <a href="https://cuet.samarth.ac.in/" class="college-link">
+                    <img src="IMAGES\exams-showcase.jpg" alt="CUET">
+                    <h4>CUET</h4>
+                </a>
             </div>
-
         </div>
+    </div>
+    
+      
     </div>
     </div>
     <h2 class="title">OUR SPONSORS </h2>
@@ -724,18 +620,12 @@
         </div>
     </div>
     </div>
-    <script>
-        var MenuItems = document.getElementById("MenuItems");
-        MenuItems.style.maxHeight = "0px";
-        function menutoggle() {
-            if (MenuItems.style.maxHeight == "0px") {
-                MenuItems.style.maxHeight = "200px"
-            }
-            else {
-                MenuItems.style.maxHeight = "0px"
-            }
-        }
-    </script>
-</body>
+    
 
+
+
+
+
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+  </body>
 </html>
