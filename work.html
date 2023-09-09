@@ -2,46 +2,62 @@
 <html>
 <head>
     <title>Student Guide</title>
-  
-</head><style>
-    #development-container {
-        text-align: center;
-        position: relative;
-        padding: 50px;
-    }
-    
-    #development-image {
-        max-width: 100%;
-        height: auto;
-    }
-    
-    #development-text {
-        font-size: 18px;
-        font-weight: bold;
-        color: #333;
-        margin-top: 20px;
-        animation: fadeIn 2s ease-in-out;
-    }
-    
-    @keyframes fadeIn {
-        0% {
-            opacity: 0;
-            transform: translateY(20px);
+    <style>
+        #development-container {
+            text-align: center;
+            position: relative;
+            padding: 50px;
         }
-        100% {
-            opacity: 1;
-            transform: translateY(0);
+        
+        #development-image {
+            max-width: 100%;
+            height: auto;
         }
-    }
-    
-</style>
+
+        /* Style for the text overlay */
+        #text-overlay {
+            position: absolute;
+            top: 50%; /* Adjust the vertical position of the text */
+            left: 50%; /* Adjust the horizontal position of the text */
+            transform: translate(-50%, -50%); /* Center the text horizontally and vertically */
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            color: white;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Media Query for screens with a maximum width of 768px */
+        @media screen and (max-width: 768px) {
+            #text-overlay {
+                font-size: 14px; /* Adjust font size for smaller screens */
+                padding: 10px; /* Adjust padding for smaller screens */
+            }
+        }
+    </style>
+</head>
 <body>
     <div id="development-container">
         <img id="development-image" src="IMAGES\Under constuction.jpg" alt="Under Development">
-        <p id="development-text">This student guide site is in development mode, still in progress, please wait.</p>
+        <div id="text-overlay">
+            The Student Guide site is in developer mode. Please wait...
+        </div>
     </div>
-    <script >// Get the development text and image elements
-        const developmentText = document.getElementById('development-text');
+    <script>
+        // Get the development text and image elements
+        const developmentContainer = document.getElementById('development-container');
+        const developmentText = document.getElementById('text-overlay');
         const developmentImage = document.getElementById('development-image');
         
         // Function to hide the development message and image
@@ -57,6 +73,8 @@
         
         // Append the button to the container
         developmentContainer.appendChild(hideButton);
-        </script>
+    </script>
 </body>
 </html>
+
+
