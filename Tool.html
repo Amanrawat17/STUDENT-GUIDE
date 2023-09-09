@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Student Guide...</title>
     <style>
-	body{
-	scroll-behaviour:smooth;
+	 body{
+		scroll-behavior: smooth;
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
@@ -102,7 +102,7 @@ display:none;
 	height:600px;
 	margin-top:-30px;
 	display:flex;
-	align-item:center;
+	align-items: center;
 	background-size:cover;
 	justify-content:center;
 	}
@@ -206,7 +206,7 @@ font-family: 'Oswald', sans-serif;
 letter-spacing:2px;
 	}
 	.content{
-	display:block;
+	display:none;
 	width:90%;
 	padding:20px;
 	margin:30px auto;
@@ -258,8 +258,7 @@ letter-spacing:1px;
 	float:left;
 	border-radius:8px;
 	}
-	.set-1{;
-	}
+	
 	.set-1 h3{
 	font-family: 'Anton', sans-serif;
 font-family: 'Dancing Script', cursive;
@@ -282,7 +281,7 @@ border:none;
 	border-radius:5px;
 	color:white;
 	background:#000000b0;
-	font-siz:15px;
+	font-size:15px;
 	padding:5px;
 	}
 	.set-1 button:hover{
@@ -296,14 +295,12 @@ font-family: 'Dancing Script', cursive;
 font-family: 'Edu NSW ACT Foundation', cursive;
 font-family: 'Libre Baskerville', serif;
 	cursor:pointer;
-
 	border-radius:5px;
 	color:white;
 	background:#6e3cbfd6;
-	font-siz:15px;
+	font-size:15px;
 	padding:5px;
 	margin-left:30px;
-
 	}
 	.set-2{
 	display:none;
@@ -324,15 +321,16 @@ font-family: 'Libre Baskerville', serif;
     /* font-family: 'Oswald', sans-serif; */
     margin-top: 1px;
     margin-bottom: 1px;
-    height: 10px;
+    height: 8px;
     padding: 5px 5px 10px 5px;
-    font-size: 12px;
+    font-size: 9px;
     color: white;
     text-align: center;
     background: #ff0b0b29;
     border-top: 2px solid red;
     border-bottom: 2px solid red;
 }	.error{
+	display:none;
 	text-align:center;
 	color:blue;
 	}
@@ -340,6 +338,7 @@ font-family: 'Libre Baskerville', serif;
 	font-size:25px;
 	}
 	.error h5{
+	display:block;
 	font-size:22px;
 	}
 	@media(max-width:800px){
@@ -350,12 +349,16 @@ font-family: 'Libre Baskerville', serif;
 	.set-1 .yes{
 	margin-left:0px;
 	}
+	.head h1{
+	margin-top:30px;
+	font-size:25px;
+	}
 	.new{
 	padding-bottom: 20px;
     margin:20px;
 	}
 	.content{
-	width:97%;
+	width:90%;
 	}
 	.set-1{
 	height:auto;
@@ -406,7 +409,7 @@ font-family: 'Libre Baskerville', serif;
 		 <li><a href='index.html'>Home</a></li>
 		 <li><a href='work.html'>Colleges</a></li>
 		 <li><a href='Exam.html'>Exam</a></li>
-		 <li><a href='login.html'>Login</a></li>
+		 <li><a href='work.html'>Courses</a></li>
 		 <li><a class='active' href='Tool.html'>Tools</a></li>
 		 <li><a href='Contact.html'>Contact</a></li>
 		
@@ -434,7 +437,7 @@ font-family: 'Libre Baskerville', serif;
 		 
 		 <div id='exam' class='exam'>
 		  <h3>Predict college by Exam Rank !! </h3>
-		  <input type='name' id='name2' placeholder='Enter your full name ' required >
+		  <input type='name' id='namenew' placeholder='Enter your full name ' required >
 		  <input type='number' id='per2' placeholder='Enter your 12th marks (%)'>
 		  <input type='number' id='jee' placeholder='Enter your JEE rank'>
 		   <button class='btn' onclick='getty()' >Search Colleges</button>
@@ -580,6 +583,7 @@ font-family: 'Libre Baskerville', serif;
 	valid.style.display ='none';
 	}
 	function rank(){
+	let error = document.getElementById('error');
 	let content = document.getElementById('content');
 	let valid = document.getElementById('valid');
 	let set = document.getElementById('set');
@@ -587,9 +591,11 @@ font-family: 'Libre Baskerville', serif;
 	let name = document.getElementById('name').value;
 	let per = document.getElementById('per').value;
 	let rank = document.getElementById('rank').value;
-	let student = document.getElementById('student');
-	student.innerHTML = name;
 	
+	let student = document.getElementById('student');
+	
+	error.style.display ='none';
+	student.innerHTML =name;
 	if( per <40){
 			valid.style.display='block';
 			valid.innerHTML ='Marks percentage must be greater or equals to 40';
@@ -600,17 +606,13 @@ font-family: 'Libre Baskerville', serif;
 			valid.innerHTML ='Marks percentage must be less than or equals to 100';
 			const myTime = setTimeout(clear, 5000);
 			}
-	else if( name =''){
-			valid.style.display='block';
-			valid.innerHTML ='Enter a valid name';
-			const myTime = setTimeout(clear, 5000);
-			}
+	
 	else if( rank <=0){
 			valid.style.display='block';
 			valid.innerHTML ='Enter a valid Rank';
 			const myTime = setTimeout(clear, 5000);
 			}
-	else if ( per >=60 && rank <=2000){
+	else if ( per >=40 && rank <=10000){
 				content.style.display = 'block';
 				set.style.display='block';
 				settwo.style.display='block'
@@ -623,7 +625,7 @@ font-family: 'Libre Baskerville', serif;
 				});
 				}
 	
-	else if(per >=60 && rank <=4000){
+	else if(per >=40 && rank <=50000){
 			content.style.display = 'block';
 			set.style.display='none';
 			settwo.style.display='block'
@@ -639,13 +641,16 @@ font-family: 'Libre Baskerville', serif;
 			
 	function getty(){
 	let content = document.getElementById('content');
-	
+	let set = document.getElementById('set');
+	let settwo = document.getElementById('set-2');
 	let error = document.getElementById('error');
-	let name = document.getElementById('name2').value;
+	let namer = document.getElementById('namenew').value;
 	let per = document.getElementById('per2').value;
 	let rank = document.getElementById('jee').value;
 	let student = document.getElementById('student');
-	student.innerHTML == name;
+	student.innerHTML = namer;
+	set.style.display ='none';
+	settwo.style.display ='none';
 	content.style.display = 'block';
 	error.style.display = 'block';
 	content.scrollIntoView({
