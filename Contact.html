@@ -33,20 +33,28 @@
         display: inline-block;
     }
     
-    .container {
-        display: flex;
-        justify-content: space-around;
-        align-items: flex-start;
-        margin-top: 20px;
-    }
+   .container {
+
+    padding: 34px;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    align-content: center;
+    flex-direction: row;
+}
     
     .contact-info,
     .contact-form {
+		margin:10px;
         background-color: #fff;
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        width: 45%;
+        width: 100%;
+		max-width:500px;
+		
     }
     
     .contact-info h2,
@@ -69,12 +77,13 @@
     input[type="text"],
     input[type="email"],
     textarea {
-        width: 100%;
+        width: 95%;
         padding: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
         font-size: 16px;
-        margin-top: 5px;
+        margin-top: 8px;
+		margin-bottom:8px;
     }
     
     button {
